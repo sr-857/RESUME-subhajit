@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subhajit Roy - Cybersecurity Professional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0A1929;
+            --primary-blue: #1E3A5F;
+            --accent-gold: #D4AF37;
+            --text-primary: #1A1A1A;
+            --text-secondary: #4A4A4A;
+            --text-light: #6B7280;
+            --bg-white: #FFFFFF;
+            --bg-cream: #F8F7F4;
+            --border-color: #E5E5E5;
+            --shadow-subtle: rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #F8F7F4 0%, #FFFFFF 100%);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            background: var(--bg-white);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.12),
+                0 0 0 1px rgba(0, 0, 0, 0.03);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Decorative header accent */
+        .header-accent {
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary-blue) 50%, var(--accent-gold) 100%);
+            position: relative;
+        }
+
+        .header-accent::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        .content-wrapper {
+            padding: 60px 80px 80px;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 900;
+            color: var(--primary-dark);
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            animation: slideDown 0.6s ease-out 0.2s both;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .title-role {
+            font-size: 18px;
+            color: var(--accent-gold);
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            animation: slideDown 0.6s ease-out 0.3s both;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 15px;
+            color: var(--text-secondary);
+            animation: slideDown 0.6s ease-out 0.4s both;
+        }
+
+        .contact-info a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .contact-info a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-gold);
+        }
+
+        .contact-info a:hover::after {
+            width: 100%;
+        }
+
+        .divider {
+            color: var(--border-color);
+            margin: 0 8px;
+        }
+
+        /* Section Headers */
+        .section {
+            margin-bottom: 45px;
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.5s; }
+        .section:nth-child(3) { animation-delay: 0.6s; }
+        .section:nth-child(4) { animation-delay: 0.7s; }
+        .section:nth-child(5) { animation-delay: 0.8s; }
+        .section:nth-child(6) { animation-delay: 0.9s; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--accent-gold);
+            display: inline-block;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 40%;
+            height: 3px;
+            background: var(--primary-blue);
+        }
+
+        /* Summary Section */
+        .summary {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            padding: 24px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(30, 58, 95, 0.05) 100%);
+            border-left: 4px solid var(--accent-gold);
+            border-radius: 0 8px 8px 0;
+            font-weight: 400;
+        }
+
+        /* Experience & Education Items */
+        .experience-item,
+        .education-item {
+            margin-bottom: 32px;
+            padding-left: 20px;
+            border-left: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover,
+        .education-item:hover {
+            border-left-color: var(--accent-gold);
+            transform: translateX(5px);
+        }
+
+        .job-title,
+        .degree-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
+        }
+
+        .company,
+        .school {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 4px;
+        }
+
+        .job-meta,
+        .education-meta {
+            font-size: 15px;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 14px;
+        }
+
+        .responsibilities {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .responsibilities li {
+            padding-left: 28px;
+            margin-bottom: 10px;
+            position: relative;
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .responsibilities li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .skill-category {
+            padding: 20px;
+            background: var(--bg-cream);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-blue);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            background: white;
+            box-shadow: 0 4px 12px var(--shadow-subtle);
+            border-left-color: var(--accent-gold);
+            transform: translateX(5px);
+        }
+
+        .skill-label {
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .skill-list {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 28px;
+            padding: 24px;
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.03) 0%, rgba(212, 175, 55, 0.03) 100%);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .project-item:hover {
+            box-shadow: 0 8px 24px var(--shadow-subtle);
+            border-color: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+        .project-title {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
+        }
+
+        .project-link {
+            font-size: 14px;
+            color: var(--primary-blue);
+            text-decoration: none;
+            margin-bottom: 12px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: var(--accent-gold);
+        }
+
+        .project-description {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-description li {
+            padding-left: 24px;
+            margin-bottom: 8px;
+            position: relative;
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .project-description li::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-size: 12px;
+            top: 6px;
+        }
+
+        /* Achievements */
+        .achievement-item {
+            margin-bottom: 16px;
+            padding-left: 28px;
+            position: relative;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .achievement-item::before {
+            content: '★';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-size: 20px;
+            top: 0;
+        }
+
+        .achievement-title {
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        /* Certifications */
+        .certification-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .cert-item {
+            padding: 16px 20px;
+            background: white;
+            border-radius: 6px;
+            border-left: 3px solid var(--primary-blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .cert-item:hover {
+            border-left-color: var(--accent-gold);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            transform: translateX(5px);
+        }
+
+        .cert-title {
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0;
+            }
+            .content-wrapper {
+                padding: 40px;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+            .experience-item:hover,
+            .education-item:hover,
+            .skill-category:hover,
+            .project-item:hover {
+                transform: none;
+            }
+            @keyframes fadeIn, slideDown, fadeInUp, shimmer {
+                from, to { opacity: 1; transform: none; }
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+            }
+            .content-wrapper {
+                padding: 40px 30px;
+            }
+            .name {
+                font-size: 38px;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .divider {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-accent"></div>
+        
+        <div class="content-wrapper">
+            <header class="header">
+                <h1 class="name">Subhajit Roy</h1>
+                <div class="title-role">Cybersecurity Professional</div>
+                <div class="contact-info">
+                    <span>Assam, India</span>
+                    <span class="divider">|</span>
+                    <a href="mailto:subhajitroy857@gmail.com">subhajitroy857@gmail.com</a>
+                    <span class="divider">|</span>
+                    <a href="https://linkedin.com/in/sr857" target="_blank">linkedin.com/in/sr857</a>
+                    <span class="divider">|</span>
+                    <a href="https://github.com/sr-857" target="_blank">github.com/sr-857</a>
+                </div>
+            </header>
+
+            <section class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <div class="summary">
+                    Cybersecurity professional with hands-on experience in vulnerability assessment, threat analysis, and security engineering. Proven track record through national hackathon achievement (Smart India Hackathon Runner-Up) and multiple cybersecurity internships. Skilled in building ML-powered security tools, conducting penetration testing, and implementing defense strategies. Strong foundation in Python, security frameworks, and cloud technologies with Google Cybersecurity Professional Certificate and 20+ industry certifications.
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="degree-title">Bachelor of Science in Computer Science</div>
+                    <div class="school">Assam Central University</div>
+                    <div class="education-meta">Silchar, Assam | August 2025 – Present</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree-title">High School Diploma in Science</div>
+                    <div class="school">Ramanuj Gupta Senior Secondary School</div>
+                    <div class="education-meta">India | April 2023 – March 2025</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <span class="skill-label">Security Skills:</span>
+                        <span class="skill-list">Vulnerability Assessment, Penetration Testing, Threat Hunting, Threat Intelligence, Incident Response, Security Monitoring, Malware Analysis, Windows Forensics, Log Analysis, Risk Assessment, Detection Engineering, Security Automation</span>
+                    </div>
+                    <div class="skill-category">
+                        <span class="skill-label">Programming Languages:</span>
+                        <span class="skill-list">Python, Java, C, C++, JavaScript, SQL, Bash, Shell Scripting</span>
+                    </div>
+                    <div class="skill-category">
+                        <span class="skill-label">Security Tools:</span>
+                        <span class="skill-list">Kali Linux, Metasploit, Burp Suite, Wireshark, Nmap, OWASP ZAP, Cuckoo Sandbox, Sysinternals, YARA, Sigma Rules, Splunk, Elastic Stack, Microsoft Sentinel</span>
+                    </div>
+                    <div class="skill-category">
+                        <span class="skill-label">Frameworks & Standards:</span>
+                        <span class="skill-list">OWASP Top 10, NIST Cybersecurity Framework, MITRE ATT&CK, ISO 27001</span>
+                    </div>
+                    <div class="skill-category">
+                        <span class="skill-label">Technologies:</span>
+                        <span class="skill-list">Linux, Windows Server, AWS, Azure, Docker, Git, FastAPI, React, Flask, PostgreSQL, Redis, CI/CD, REST APIs</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-title">Cyber Security Intern</div>
+                    <div class="company">Codec Technologies India</div>
+                    <div class="job-meta">Remote | November 2024 – Present</div>
+                    <ul class="responsibilities">
+                        <li>Conduct comprehensive vulnerability assessments and penetration testing across client infrastructure to identify security weaknesses and misconfigurations</li>
+                        <li>Perform threat analysis and risk assessment using industry frameworks including OWASP Top 10 and MITRE ATT&CK</li>
+                        <li>Collaborate with security teams to implement defensive strategies and secure system configurations</li>
+                        <li>Utilize security tools including Nmap, Metasploit, and Burp Suite for comprehensive security testing</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Cyber Security Intern</div>
+                    <div class="company">UptoSkills</div>
+                    <div class="job-meta">New Delhi, India | October 2025 – December 2025</div>
+                    <ul class="responsibilities">
+                        <li>Executed security assessments and vulnerability scanning on enterprise systems under industry mentorship</li>
+                        <li>Applied theoretical knowledge to real-world security scenarios including threat modeling and risk mitigation</li>
+                        <li>Developed proficiency in SIEM tools and log analysis for security incident investigations</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Internship Trainee</div>
+                    <div class="company">ApexPlanet Software Pvt Ltd</div>
+                    <div class="job-meta">Remote | October 2025 – December 2025</div>
+                    <ul class="responsibilities">
+                        <li>Learned cybersecurity fundamentals through practical training in network security and system hardening</li>
+                        <li>Studied threat detection methodologies and defensive security techniques in enterprise environments</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Student Affiliate Partner</div>
+                    <div class="company">Perplexity AI</div>
+                    <div class="job-meta">Remote | October 2025 – November 2025</div>
+                    <ul class="responsibilities">
+                        <li>Led Comet initiative promoting AI tools to 500+ students and educators for enhanced learning and research</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Technical Projects</h2>
+                
+                <div class="project-item">
+                    <div class="project-title">PhishGuard AI – ML-Powered Phishing Detection System</div>
+                    <a href="https://github.com/sr-857/phishguard-ai" class="project-link" target="_blank">github.com/sr-857/phishguard-ai</a>
+                    <div class="job-meta">November 2025 – Present</div>
+                    <ul class="project-description">
+                        <li>Engineered machine learning system achieving 98% accuracy in phishing email detection using Logistic Regression and TF-IDF natural language processing</li>
+                        <li>Built production-ready full-stack application with FastAPI backend and React frontend for real-time threat analysis</li>
+                        <li>Implemented automated email classification API with sub-second response time and interactive monitoring dashboard</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Threat Hunting Playbooks Platform</div>
+                    <a href="https://github.com/sr-857/threat-hunting-playbooks" class="project-link" target="_blank">github.com/sr-857/threat-hunting-playbooks</a>
+                    <div class="job-meta">October 2025 – November 2025</div>
+                    <ul class="project-description">
+                        <li>Developed enterprise threat hunting platform integrating Sigma and YARA detection rules across Splunk, Elastic, and Microsoft Sentinel</li>
+                        <li>Architected microservices infrastructure with FastAPI, Celery workers, Next.js dashboard, and PostgreSQL/Redis/MinIO storage</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">CyberSentinel – SOC Threat Intelligence Platform</div>
+                    <a href="https://github.com/sr-857/CyberSentinel" class="project-link" target="_blank">github.com/sr-857/CyberSentinel</a>
+                    <div class="job-meta">October 2025 – November 2025</div>
+                    <ul class="project-description">
+                        <li>Built security operations center analytics platform correlating threat intelligence from AbuseIPDB and AlienVault OTX with server logs</li>
+                        <li>Designed automated IOC correlation engine with scoring algorithms and real-time alert generation</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Malware Analysis Sandbox</div>
+                    <a href="https://github.com/sr-857/malware-analysis-sandbox-v2" class="project-link" target="_blank">github.com/sr-857/malware-analysis-sandbox-v2</a>
+                    <div class="job-meta">August 2025 – October 2025</div>
+                    <ul class="project-description">
+                        <li>Constructed isolated malware analysis environment using Cuckoo Sandbox and VirtualBox for safe behavioral analysis</li>
+                        <li>Automated monitoring of file system changes, registry modifications, network traffic, and system calls using Python</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Achievements & Leadership</h2>
+                <div class="achievement-item">
+                    <span class="achievement-title">Smart India Hackathon 2024 – National Runner-Up:</span> Led cross-functional team to second place among thousands of participants in India's largest hackathon, developing innovative technology solution
+                </div>
+                <div class="achievement-item">
+                    <span class="achievement-title">SKY HACK 2025 Participant:</span> Competed in national cybersecurity hackathon by Astrakshaya, applying security knowledge to real-world challenges
+                </div>
+                <div class="achievement-item">
+                    <span class="achievement-title">Student Coordinator, Edge3:</span> Organized cybersecurity workshops, mentorship programs, and technical events for 300+ university students
+                </div>
+                <div class="achievement-item">
+                    <span class="achievement-title">IIT Madras Shaastra 2026:</span> Participated in CP Potpourri and Quantathon competitive programming events
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certification-grid">
+                    <div class="cert-item">
+                        <span class="cert-title">Google Cybersecurity Professional Certificate</span> – Foundations of Cybersecurity, Tools of the Trade (Linux and SQL), Assets Threats and Vulnerabilities (2025)
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-title">Certified Cybersecurity Educator Professional (CCEP)</span> – Red Team Leaders (November 2025)
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-title">Security & Exploitation:</span> Windows Kernel Exploitation, SQL Injection Attacks (EC-Council), Web Browser for Hacking, Hashcat Essential Training (LinkedIn)
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-title">Practical Training:</span> Make In-house Hacking and Pentesting Lab (EC-Council), Bootcamp on Windows Forensic Analysis (CDAC Thiruvananthapuram)
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-title">AI & Cloud Security:</span> 5-Day AI Agents Intensive Course (Google/Kaggle), Offensive Agent AI Course (Red Team Leaders), Protect Sensitive Data with DLP (Google Cloud Security)
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-title">Job Simulations:</span> Deloitte Australia (Cyber & Data Analytics), Mastercard Cybersecurity, AIG Shields Up, Tata Cybersecurity Analyst, AWS Solutions Architecture, Electronic Arts Software Engineering
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
