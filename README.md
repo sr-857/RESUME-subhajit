@@ -3,7 +3,7 @@
 This repository hosts my resume in HTML format. It’s designed to be easy to open, share, and review without extra setup.
 
 ### What’s inside
-- `Subhajit_Roy_Resume.html` — My full resume page with sections on skills, experience, and projects. :contentReference[oaicite:0]{index=0}
+- `index.html` — My full resume page with sections on skills, experience, and projects. :contentReference[oaicite:0]{index=0}
 
 ### How to view
 You can open the HTML file in any browser after downloading it, or browse the content directly on GitHub.
